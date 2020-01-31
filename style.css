@@ -1,0 +1,13 @@
+.moon {
+  height:300px;
+  width:300px;
+  background: shadow;
+
+}
+.space-buttons {
+  justify-content: space-evenly;
+}
+
+.btn-fix {
+  width: 5em;
+}
