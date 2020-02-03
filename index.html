@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>Moon Cheese</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -9,6 +9,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <script src="https://use.fontawesome.com/releases/v5.12.0/js/all.js" data-auto-replace-svg="nest"></script>
   </head>
 
 
@@ -16,45 +17,64 @@
     <header class="fluid-container">
 <!--the score and upgrades selected go here-->
       <div class="row">
-        <div class="col-5 text-white">Cheese Mined: <span id="update-cheese"></span></div>
-        <div class="col-5 text-white">Clicker Damage: <span id="click-dmg"></span></div>
+        <h1 class="col-5 text-white">Cheese Mined: <span id="update-cheese"></span></h1>
+        <h1 class="col-5 text-white">Click Damage: <span id="click-dmg"></span></h1>
         <div class="col-6"></div>
 
         </div>
 
       </div>
       <div class="row">
-        <div class="col-12 text-center">
+        <div class="col-10 text-center">
           <div onclick="mine()">
             <img class="moon" src="../images/moon.png" alt="Picture of the moon">
           </div>
         </div>
+        <div class="col-2">
+          <div class="row">
+            <div class="col-12">hi</div>
+          </div>
+          <div class="row">
+            <div class="col-12">hey</div>
+          </div>
+          <div class="row">
+            <div class="col-12">awards</div>
+          </div>
+        </div>
       </div>
 <!---This will be the upgrades row-->
-      <div class="row space-buttons text-white">
+      <div class="row space-buttons text-white pad-top">
         <div class="col-2 btn-fix">
-          <button type="button" class="btn btn-primary" onclick="buyPickAxe()">PickAxe</button>
-          <p>Price: <span id="pick-price"></span><br>Count: <span id="pick-count"></span></p>
+          <button type="button" class="btn btn-primary addMore" onclick="buyPickAxe()" title="Add 1 damage">PickAxe</button>
+          <p>Price: <span id="pick-price"></span><br>Count: <span id="pick-count"></span><i class="fa fa-mouse-pointer" aria-hidden="true"></i></p>
         </div>
         <div class="col-2 btn-fix">
           <button type="button" class="btn btn-primary" onclick="buyCart()">Cart</button>
-          <p>Price: <span id="cart-price"></span><br>Count: <span id="cart-count"></span></p>
+          <p>Price: <span id="cart-price"></span><br>Count: <span id="cart-count"></span><i class="fa fa-shopping-cart" aria-hidden="true"></i></p>
         </div>
         <div class="col-2 btn-fix">
-          <button type="button" class="btn btn-warning" onclick="automaticButtons('rovers')">Rover</button>
-          <p>Price: <span id="rover-price"></span><br>Count: <span id="rover-count"></span>
+          <button type="button" class="btn btn-warning addMore" onclick="automaticButtons('rovers')" title="Gain cheese passively">Rover</button>
+          <p>Price: <span id="rover-price"></span><br>Count: <span id="rover-count"></span><i class="fa fa-truck" aria-hidden="true"></i></i>
           </p>
         </div>
         <div class="col-2 btn-fix">
           <button type="button" class="btn btn-warning" onclick="automaticButtons('UFO')">UFO</button>
-          <p>Price: <span id="ufo-price"></span><br>Count: <span id="ufo-count"></span></p>
+          <p>Price: <span id="ufo-price"></span><br>Count: <span id="ufo-count"></span><i class="fa fa-plane" aria-hidden="true"></i></p>
         </div>
       </div>
+      <div class="row">
+        <div class="col-12">
+          <h2 class='text-center text-white' id="welcome">Welcome to Moon Cheese Pick Click Game</h2>
+          <button class="button" id="ok-button">You are a boss</button>
+        </div>
+      </div>
+<!--add an animation for a large purchase and an award-->
       <div class="row">
         <div class="col-12">
           <p class="text-center text-white" id="more-supplies"></p>
         </div>
       </div>
+  <!---add an image for a stockpile of the cheese collected-->
 
     </header>
 

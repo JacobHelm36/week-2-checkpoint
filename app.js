@@ -1,7 +1,17 @@
+//hide an upgrade the user can only see after a certain amount of supplies are gathered
+
 let cheeseCount = 100
 let clickDamage = 1
 let autoModPurchases = []
 
+let cheeseThief = {
+  thief: {
+    multiplier: 50,
+    quantity: 0,
+    
+  }
+}
+//make 
 let clickUpgrades = {
   pickAxes: {
     price: 20,
@@ -32,9 +42,20 @@ let autoUpgrades = {
 
 let inspirationElem = document.getElementById("more-supplies")
 
+
+function hideClick() {
+  if (cheeseCount > 2000) {
+    document.getElementById("ok-button").hidden = false
+  } else {
+    document.getElementById("ok-button").hidden = true
+  }
+}
+hideClick()
+
 //initial click function
 function mine() {
   cheeseCount += clickDamage
+  document.getElementById("welcome").hidden = true
   update()
 }
 //click upgrade purchase buttons
@@ -96,6 +117,7 @@ function collectAutoUpgrades() {
 
 //add how many items the user has
 function update() {
+//add an if else statement for a cheese thief after a certain amount of points
   document.getElementById("update-cheese").textContent = cheeseCount.toString();
   document.getElementById("click-dmg").textContent = clickDamage.toString();
   document.getElementById("cart-price").textContent = clickUpgrades.carts.price.toString()
